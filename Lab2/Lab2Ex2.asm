@@ -20,7 +20,7 @@ segment code use32 class=code
         MOV BX, AX ; BX = AX = b*c
         
         MOV AL, 2   ; AL = 2
-        mul byte [b] ; AX = b*2
+        MUL byte [b] ; AX = b*2
         
         ADD AX, [d] ; AX = d+b*2
         SUB AX, BX  ; AX = d+b*2-b*c
