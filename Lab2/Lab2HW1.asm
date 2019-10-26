@@ -10,8 +10,8 @@ segment data use32 class=data
     b DW 10
     c DW 3
     d DW 2
-    h DW 256    ; 100h
-    ; r DW 0
+    h DW 256    ; 100h\s
+    r DW 0
     ; Expected result: 0x010A
 
 segment code use32 class=code
@@ -26,7 +26,7 @@ segment code use32 class=code
     
         ADD AX, [h]
         
-        ; MOV [r], AX
+        MOV [r], AX
     
         push dword 0
         call [exit]
