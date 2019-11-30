@@ -43,8 +43,20 @@ segment code use32 class=code
         ADD BX, DX
         ADC CX, 0           ; CX:BX = (a*a+b/c-1)/(b+c)+d
         
-        SUB BX, [x]
-        SBB CX, [x+2]       ; CX:BX = (a*a+b/c-1)/(b+c)+d-x 
+        ;SUB BX, [x]
+        ;SBB CX, [x+2]       ; CX:BX = (a*a+b/c-1)/(b+c)+d-x 
+        
+        MOV [temp], BX
+        MOV [temp+2], CX    
+        
+        MOV EAX, [temp]
+        MOV EDX, 0
+        
+        MOV EBX, [x]
+        MOV ECX, [x+4]
+        
+        SUB EAX, EBX
+        SBB ECX, EDX
         
         push    dword 0      
         call    [exit]       

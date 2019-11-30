@@ -12,9 +12,8 @@ extern exit
 import exit msvcrt.dll    
                           
 segment data use32 class=data
-    a DW 0101 0101 0101 0101b
-    b DW 1111 0000 1111 0000b
-    c DD 0
+    a DW 0101010101010101b
+    b DW 1111000011110000b
     ; Expected: 1111 1111 1111 1111 1110 0010 1011 1000
     
 segment code use32 class=code
