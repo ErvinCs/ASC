@@ -34,17 +34,18 @@
     32                                          ; Restore the original stack
     33 00000009 5D                              POP EBP
     34 0000000A C3                              RET
-    35                                      start:
-    36 0000000B FF35[04000000]                  push dword [b]
-    37 00000011 FF35[00000000]                  push dword [a]
-    38 00000017 E8E4FFFFFF                      call my_func
-    39 0000001C 83C408                          ADD ESP, 4*2
-    40                                          
-    41                                          ; printf(format, EAX)
-    42 0000001F 50                              PUSH EAX
-    43 00000020 68[08000000]                    PUSH s_format
-    44 00000025 FF15[00000000]                  CALL [printf]
-    45 0000002B 83C408                          ADD ESP, 4*2
-    46                                          
-    47 0000002E 6A00                            push    dword 0      
-    48 00000030 FF15[00000000]                  call    [exit]       
+    35                                          
+    36                                      start:
+    37 0000000B FF35[04000000]                  push dword [b]
+    38 00000011 FF35[00000000]                  push dword [a]
+    39 00000017 E8E4FFFFFF                      call my_func
+    40 0000001C 83C408                          ADD ESP, 4*2
+    41                                          
+    42                                          ; printf(format, EAX)
+    43 0000001F 50                              PUSH EAX
+    44 00000020 68[08000000]                    PUSH s_format
+    45 00000025 FF15[00000000]                  CALL [printf]
+    46 0000002B 83C408                          ADD ESP, 4*2
+    47                                          
+    48 0000002E 6A00                            push    dword 0      
+    49 00000030 FF15[00000000]                  call    [exit]       
