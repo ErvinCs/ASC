@@ -8,4 +8,6 @@ Computing Systems Architecture
 ### Lab5 - Array Operations & Jumps
 ### Lab6 - String Operations
 ### Lab7 - Print in Console
-### Lab8 - Funcion Calls
+### Lab8 - Function Calls
+### Lab9-10 - Text file operations
+### Lab11-13 - Multiple Modules - ASM+ASM & ASM+C
